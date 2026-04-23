@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.spring.Security.dto.AuthDto;
 import com.spring.Security.util.JWTUtil;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api")
 public class AuthController {
@@ -23,7 +25,7 @@ public class AuthController {
 	private JWTUtil jWTUtil;
 
 	@PostMapping("/authenticate")
-	public String generateToken(@RequestBody AuthDto authDto) {
+	public String generateToken(@Valid  @RequestBody AuthDto authDto) {
 
 		try {
 			authenticationManager.authenticate(

@@ -33,7 +33,7 @@ public class UserCommandLineRunner implements CommandLineRunner{
 		
 		users=userDetailsRepository.save(users);
 		
-	   System.out.print("user object saved " + users);
+	   System.out.println("User  object saved " + users);
 		
 		
 	}
